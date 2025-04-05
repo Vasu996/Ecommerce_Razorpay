@@ -1,0 +1,79 @@
+/* header.css */
+
+.header {
+    background: linear-gradient(to right, #3b82f6, #1e3a8a); /* Tailwind's blue-500 to blue-900 */
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .logo .text-accent {
+    color: #facc15; /* Tailwind's yellow-400 */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #dbeafe; /* Tailwind's blue-100 */
+  }
+  
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      right: 1.5rem;
+      background-color: #1e3a8a;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
